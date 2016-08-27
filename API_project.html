@@ -4,40 +4,39 @@
 <title>NY Times Search</title>
 
 
-	<link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </head>
 <body>
 
 <div class="jumbotron">
-  <h1 style="margin-left:100px;"> New York Times Search</h1>
+  <h1 style="margin-left:100px;">New York Times Search</h1>
   
 </div>
 
-	<form class="form-horizontal">
+  <form class="form-horizontal">
   <fieldset>
-    <legend style="margin-left:100px;"> Search Parameters</legend>
+    <legend style="margin-left:100px;">Search Parameters</legend>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Search Term</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="searchTerm">
+      <div class="search-term">
+        <input type="text" class="form-control" id="search-term">
       </div>
     </div>
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Number of Records</label>
-      <div class="col-lg-10">
-        <input type="password" class="form-control" id="numRecords">
+      <div class="num-records">
+        <input type="password" class="form-control" id="num-records">
         
         </div>
       </div>
     </div>
-    <div class="form-group">
+    <div class="start-year">
       <label for="textArea" class="col-lg-2 control-label">Start Year</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea" style="margin-right:100px;"></textarea>
+        <textarea class="form-control" rows="1" id="start-year" style="margin-right:100px;"></textarea>
         
       </div>
     </div>
@@ -48,21 +47,27 @@
         </div>
       </div>
     </div>
-   <div class="form-group">
+   <div class="end-year">
       <label for="textArea" class="col-lg-2 control-label">End Year</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <textarea class="form-control" rows="1" id="end-year"></textarea>
         
       </div>
     </div>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Search</button>
-        <button type="submit" class="btn btn-default">Clear</button>
+        <button type="reset" class="btn btn-default" id="searchBtn">Search</button>
+        <button type="submit" class="btn btn-default" id= "clearBtn">Clear</button>
       </div>
     </div>
   </fieldset>
 </form>
+<br>
+
+<form class="form-horizontal">
+  <fieldset>
+    <legend style="margin-left:100px;">Search Results</legend>
+    <div class="searchResults"></div>
 
 </body>
 </html>
